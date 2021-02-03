@@ -96,8 +96,10 @@
                <br><br>
                
                <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">Illustration of mel-spectrogram reconstruction process for 50 refinement steps:</h2>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> Grad-TTS-50 model is considered. In this section we show intermediate mel-spectrogram states from score-based decoder in order to illustrate how reverse diffusion works.</p>
+               <br>
                <p><b style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Text:</b> <span class="text_e2e">Here are the match lineups for the Colombia Haiti match.</span></p>
-               <audio controls=""> <source src="assets/test/test.wav"> </audio>
+               <audio controls=""> <source src="assets/test/50.wav"> </audio>
                <br>
                <img src="assets/imgs/reverse_diffusion.gif" width="600px" class="center">
                <table style="margin-left:auto;margin-right:auto;">
@@ -176,7 +178,7 @@
                <br><br>
 
                <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">Examples from MOS evaluation:</h2>
-               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> Only one model of Grad-TTS is trained. N corresponds to the overall number of timesteps used during inference to synthesize samples.</p>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> Only one model of Grad-TTS is trained. In notation of Grad-TTS-N letter N corresponds to the overall number of timesteps used during inference to synthesize samples. The more is N the more accurate reverse diffusion trajectories are supposed to be restored resulting in better sound quality.</p>
                <br>
                <table style="margin-left:auto;margin-right:auto;">
                   <tbody>
@@ -193,25 +195,25 @@
                         <td> <audio controls=""> <source src="assets/mos/05.wav"> </audio> </td>
                      </tr>
                      <tr>
-                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS N=4</td>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS-4</td>
                         <td> <audio controls=""> <source src="assets/mos/01_grad-tts-4.wav"> </audio> </td>
                         <td> <audio controls=""> <source src="assets/mos/03_grad-tts-4.wav"> </audio> </td>
                         <td> <audio controls=""> <source src="assets/mos/05_grad-tts-4.wav"> </audio> </td>
                      </tr>
                      <tr>
-                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS N=10</td>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS-10</td>
                         <td> <audio controls=""> <source src="assets/mos/01_grad-tts-10.wav"> </audio> </td>
                         <td> <audio controls=""> <source src="assets/mos/03_grad-tts-10.wav"> </audio> </td>
                         <td> <audio controls=""> <source src="assets/mos/05_grad-tts-10.wav"> </audio> </td>
                      </tr>
                      <tr>
-                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS N=100</td>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS-100</td>
                         <td> <audio controls=""> <source src="assets/mos/01_grad-tts-100.wav"> </audio> </td>
                         <td> <audio controls=""> <source src="assets/mos/03_grad-tts-100.wav"> </audio> </td>
                         <td> <audio controls=""> <source src="assets/mos/05_grad-tts-100.wav"> </audio> </td>
                      </tr>
                      <tr>
-                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS N=1000</td>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS-1000</td>
                         <td> <audio controls=""> <source src="assets/mos/01_grad-tts-1000.wav"> </audio> </td>
                         <td> <audio controls=""> <source src="assets/mos/03_grad-tts-1000.wav"> </audio> </td>
                         <td> <audio controls=""> <source src="assets/mos/05_grad-tts-1000.wav"> </audio> </td>
@@ -239,7 +241,7 @@
                <br><br>
 
                <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">End-to-end pipeline synthesis:</h2>
-               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> we present results of our preliminary work.</p>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> we present results of our preliminary work, which is in progress.</p>
                <br>
                <table style="margin-left:auto;margin-right:auto;">
                   <tbody>
