@@ -151,7 +151,7 @@
                
                <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">Comparison of generalized DPM vs. standard DPM:</h2>
                <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Our generalized DPM framework, where we use text encoder outputs <i>µ</i> as mean of decoder terminal distribution, results in the lower number of reverse diffusion steps (number of backward ODE solver iterations) necessary for high-quality mel-spectrogram generation. To show the difference we trained additional Grad-TTS model reconstructing mels from standard normal terminal distribution <i>N</i>(0, <i>I</i>).</p>
-               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> Grad-TTS decoder neural network, which models gradients of data log-density, is still conditioned with text encoder outputs for both models.</p>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> Grad-TTS decoder neural network, which models gradients of data log-density, is still conditioned on text encoder outputs for both models.</p>
                <br>
                <table style="margin-left:auto;margin-right:auto;">
                   <tbody>
